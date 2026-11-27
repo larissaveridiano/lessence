@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --cafe: #241B18;
+    --marrom: #795548;
+    --champagne: #B89A68;
+    --areia: #E8DFD3;
+    --marfim: #FAF7F2;
+    --branco: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--marfim);
+    color: var(--cafe);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Faixa superior */
+
+.faixa-superior {
+    background: var(--cafe);
+    color: var(--marfim);
+    text-align: center;
+    padding: 12px;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    background: var(--marfim);
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    padding: 35px 20px;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    color: var(--cafe);
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: var(--marrom);
+    margin-top: 15px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 1px solid var(--areia);
+    padding: 20px;
+}
+
+.menu a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: var(--champagne);
+}
+
+/* Banner dividido */
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 490px;
+    background: var(--cafe);
+}
+
+.banner-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    color: var(--marfim);
+}
+
+.subtitulo {
+    color: var(--champagne);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.banner h1 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 22px 0;
+}
+
+.banner p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.banner-imagem {
+    overflow: hidden;
+    position: relative;
+    min-height: 490px;
+}
+
+.banner-imagem img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botao {
+    display: block;
+    text-align: center;
+    background: var(--champagne);
+    color: var(--cafe);
+    padding: 16px 25px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: var(--areia);
+    color: var(--cafe);
+}
+
+/* Catálogo */
+
+.catalogo {
+    padding-top: 45px;
+    padding-bottom: 65px;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-secao h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.card-produto {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+}
+
+.foto-produto {
+    height: 310px;
+    background: #F0ECE7;
+    border: 1px solid var(--areia);
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.foto-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: 0.3s;
+}
+
+.card-produto:hover img {
+    transform: scale(1.05);
+}
+
+.info-produto {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    padding: 18px 8px;
+}
+
+.marca {
+    color: var(--marrom);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.info-produto h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.categoria-produto {
+    font-size: 11px;
+    color: var(--marrom);
+    margin-bottom: 8px;
+}
+
+.preco {
+    font-size: 17px;
+    color: var(--marrom);
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.estoque {
+    color: #65745A;
+    font-size: 11px;
+}
+
+.sem-estoque {
+    color: #A04444;
+    font-size: 11px;
+}
+
+.botao-produto {
+    display: block;
+    background: var(--cafe);
+    color: var(--marfim);
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+    margin-top: auto;
+    transition: 0.3s;
+}
+
+.botao-produto:hover {
+    background: var(--champagne);
+    color: var(--cafe);
+}
+
+/* Rodapé */
+
+.rodape {
+    background: var(--cafe);
+    color: var(--marfim);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.rodape h2 {
+    color: var(--champagne);
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.rodape p {
+    font-size: 12px;
+    margin: 12px 0;
+}
+
+.rodape small {
+    font-size: 10px;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 28px;
+        letter-spacing: 7px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .banner {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-conteudo {
+        padding: 40px 25px;
+    }
+
+    .banner h1 {
+        font-size: 32px;
+    }
+
+    .banner-imagem {
+        min-height: 300px;
+    }
+
+    .foto-produto {
+        height: 220px;
+        padding: 15px;
+    }
+
+    .info-produto h3 {
+        font-size: 16px;
+    }
+}
+
+/* Ajuste do tamanho das fontes */
+
+body {
+    font-size: 16px;
+}
+
+.faixa-superior {
+    font-size: 13px;
+}
+
+.logo {
+    font-size: 42px;
+}
+
+.logo span {
+    font-size: 14px;
+}
+
+.menu a {
+    font-size: 16px;
+}
+
+.subtitulo {
+    font-size: 13px;
+}
+
+.banner h1 {
+    font-size: 46px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.botao {
+    font-size: 14px;
+}
+
+.titulo-secao h2 {
+    font-size: 36px;
+}
+
+.marca {
+    font-size: 12px;
+}
+
+.info-produto h3 {
+    font-size: 22px;
+}
+
+.categoria-produto {
+    font-size: 13px;
+}
+
+.preco {
+    font-size: 20px;
+}
+
+.estoque, .sem-estoque {
+    font-size: 13px;
+}
+
+.botao-produto {
+    font-size: 14px;
+}
+
+.rodape h2 {
+    font-size: 28px;
+}
+
+.rodape p {
+    font-size: 15px;
+}
+
+.rodape small {
+    font-size: 12px;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .banner h1 {
+        font-size: 35px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .info-produto h3 {
+        font-size: 18px;
+    }
+
+    .preco {
+        font-size: 17px;
+    }
+}
