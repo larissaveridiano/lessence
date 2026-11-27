@@ -4,13 +4,47 @@ session_start();
 
 require_once "configuracao/conexao.php";
 
-$consulta = $conexao->query(
-    "SELECT produtos.*, categorias.nome AS categoria
-     FROM produtos
-     INNER JOIN categorias
-     ON produtos.categoria_id = categorias.id
-     ORDER BY produtos.id"
-);
+$pesquisa = trim($_GET['pesquisa'] ?? '');
+$grupo = $_GET['grupo'] ?? '';
+$categoria = (int) ($_GET['categoria'] ?? 0);
+
+$sql = "SELECT produtos.*, categorias.nome AS categoria
+        FROM produtos
+        INNER JOIN categorias
+        ON produtos.categoria_id = categorias.id
+        WHERE 1=1";
+
+$parametros = [];
+
+if ($pesquisa !== '') {
+    $sql .= " AND (produtos.nome LIKE ?
+              OR produtos.marca LIKE ?)";
+
+    $parametros[] = "%$pesquisa%";
+    $parametros[] = "%$pesquisa%";
+}
+
+if ($grupo === 'femininos') {
+    $sql .= " AND produtos.categoria_id IN (1, 3)";
+}
+
+if ($grupo === 'masculinos') {
+    $sql .= " AND produtos.categoria_id IN (2, 4)";
+}
+
+if ($grupo === 'arabes') {
+    $sql .= " AND produtos.categoria_id = 5";
+}
+
+if ($categoria > 0) {
+    $sql .= " AND produtos.categoria_id = ?";
+    $parametros[] = $categoria;
+}
+
+$sql .= " ORDER BY produtos.id";
+
+$consulta = $conexao->prepare($sql);
+$consulta->execute($parametros);
 
 $produtos = $consulta->fetchAll();
 
@@ -115,6 +149,55 @@ $categorias = $conexao->query(
     <h2>Nossa coleção</h2>
 
 </div>
+
+<form method="GET"
+      action="index.php#catalogo"
+      class="filtros">
+
+    <input type="search"
+           name="pesquisa"
+           placeholder="Busque seu perfume ou marca..."
+           value="<?= htmlspecialchars($pesquisa) ?>">
+
+    <select name="categoria">
+
+        <option value="0">Todas as categorias</option>
+
+        <?php foreach ($categorias as $item): ?>
+
+            <option value="<?= $item['id'] ?>"
+                <?= $categoria == $item['id'] ? 'selected' : '' ?>>
+
+                <?= htmlspecialchars($item['nome']) ?>
+
+            </option>
+
+        <?php endforeach; ?>
+
+    </select>
+
+    <button type="submit" class="botao-pesquisa">
+        PESQUISAR
+    </button>
+
+    <a href="index.php#catalogo" class="limpar-filtros">
+        Limpar
+    </a>
+
+</form>
+
+<p class="resultado-pesquisa">
+    <?= count($produtos) ?> fragrância(s) encontrada(s)
+</p>
+
+<?php if (empty($produtos)): ?>
+
+    <div class="nenhum-produto">
+        Nenhuma fragrância encontrada.
+        Tente pesquisar outro perfume.
+    </div>
+
+<?php endif; ?>
 
     <div class="row g-4">
 

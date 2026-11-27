@@ -431,3 +431,86 @@ body {
         font-size: 17px;
     }
 }
+
+/* Pesquisa e filtros */
+
+.filtros {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 22px;
+    background: var(--areia);
+    margin-bottom: 20px;
+}
+
+.filtros input,
+.filtros select {
+    background: var(--branco);
+    border: 1px solid var(--champagne);
+    color: var(--cafe);
+    padding: 14px;
+    font-size: 14px;
+    outline: none;
+    min-width: 0;
+}
+
+.filtros input {
+    flex: 2;
+}
+
+.filtros select {
+    flex: 1;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+    border-color: var(--marrom);
+}
+
+.botao-pesquisa {
+    background: var(--cafe);
+    color: var(--marfim);
+    border: none;
+    padding: 15px 25px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.botao-pesquisa:hover {
+    background: var(--champagne);
+    color: var(--cafe);
+}
+
+.limpar-filtros {
+    color: var(--marrom);
+    font-size: 14px;
+    padding: 10px;
+}
+
+.resultado-pesquisa {
+    font-size: 14px;
+    color: var(--marrom);
+    margin-bottom: 25px;
+}
+
+.nenhum-produto {
+    background: var(--areia);
+    text-align: center;
+    padding: 40px;
+    color: var(--marrom);
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .limpar-filtros {
+        text-align: center;
+    }
+}
