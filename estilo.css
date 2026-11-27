@@ -1643,3 +1643,32 @@ body {
         padding: 12px;
     }
 }
+
+/* Funcionalidades JavaScript */
+
+.mostrar-senha {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    color: var(--marrom);
+    font-family: inherit;
+    font-size: 13px;
+    padding: 0;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.mostrar-senha:hover {
+    color: var(--champagne);
+    text-decoration: underline;
+}
+
+.botao-confirmar-compra:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+input:user-invalid {
+    border-color: #A04444;
+}

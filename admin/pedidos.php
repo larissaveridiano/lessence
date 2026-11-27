@@ -368,5 +368,7 @@ if (isset($_GET['pedido'])) {
 
 </footer>
 
+<script src="../javascript.js"></script>
+
 </body>
 </html>

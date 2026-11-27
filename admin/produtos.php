@@ -502,7 +502,7 @@ $produtos = $conexao->query(
                                     </a>
 
                                     <form method="POST"
-                                          onsubmit="return confirm('Deseja excluir este produto?');">
+                                          
 
                                         <input type="hidden"
                                                name="id"
@@ -549,6 +549,8 @@ $produtos = $conexao->query(
     <small>© 2026 L'Essence — Administração.</small>
 
 </footer>
+
+<script src="../javascript.js"></script>
 
 </body>
 </html>

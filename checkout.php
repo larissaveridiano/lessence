@@ -630,5 +630,7 @@ foreach ($carrinho as $id => $quantidade) {
 
 </footer>
 
+<script src="javascript.js"></script>
+
 </body>
 </html>
