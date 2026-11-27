@@ -1400,3 +1400,246 @@ body {
         font-size: 26px;
     }
 }
+
+/* Painel administrativo */
+
+.pagina-admin {
+    padding-top: 45px;
+    padding-bottom: 65px;
+    min-height: 550px;
+}
+
+.titulo-admin {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-admin .subtitulo {
+    color: var(--marrom);
+}
+
+.titulo-admin h1 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.titulo-admin p {
+    font-size: 16px;
+    color: var(--marrom);
+}
+
+/* Cartões do painel */
+
+.card-admin {
+    background: var(--branco);
+    border: 1px solid var(--areia);
+    border-top: 4px solid var(--champagne);
+    padding: 30px;
+    height: 100%;
+}
+
+.card-admin span {
+    font-size: 13px;
+    color: var(--marrom);
+    letter-spacing: 1px;
+}
+
+.card-admin h2 {
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--cafe);
+    margin: 20px 0;
+}
+
+.card-admin p {
+    color: var(--marrom);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.acao-admin {
+    background: var(--cafe);
+    color: var(--marfim);
+    padding: 35px;
+    height: 100%;
+}
+
+.acao-admin h2 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.acao-admin p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 18px 0 25px;
+}
+
+/* Formulário administrativo */
+
+.painel-admin {
+    background: var(--branco);
+    border: 1px solid var(--areia);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.painel-admin h2 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.formulario-admin label {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.formulario-admin input,
+.formulario-admin select,
+.formulario-admin textarea {
+    width: 100%;
+    background: var(--marfim);
+    color: var(--cafe);
+    border: 1px solid var(--areia);
+    padding: 13px;
+    font-size: 15px;
+    outline: none;
+}
+
+.formulario-admin input:focus,
+.formulario-admin select:focus,
+.formulario-admin textarea:focus {
+    border-color: var(--champagne);
+}
+
+.botao-admin {
+    background: var(--cafe);
+    color: var(--marfim);
+    border: none;
+    padding: 16px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.botao-admin:hover {
+    background: var(--champagne);
+    color: var(--cafe);
+}
+
+.cancelar-edicao {
+    color: var(--marrom);
+    font-size: 14px;
+    display: inline-block;
+    padding: 15px;
+}
+
+/* Tabelas administrativas */
+
+.tabela-admin {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.tabela-admin th {
+    background: var(--cafe);
+    color: var(--marfim);
+    padding: 16px;
+    font-weight: 500;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.tabela-admin td {
+    padding: 16px;
+    border-bottom: 1px solid var(--areia);
+    vertical-align: middle;
+}
+
+.tabela-admin tbody tr:hover {
+    background: var(--marfim);
+}
+
+.tabela-admin img {
+    width: 65px;
+    height: 80px;
+    background: #F4F2EF;
+    padding: 7px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.tabela-admin small {
+    display: block;
+    color: var(--marrom);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.acoes-tabela {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.botao-editar {
+    display: inline-block;
+    background: var(--areia);
+    color: var(--cafe);
+    padding: 10px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.botao-editar:hover {
+    background: var(--champagne);
+    color: var(--cafe);
+}
+
+.botao-excluir {
+    background: transparent;
+    border: 1px solid #A04444;
+    color: #A04444;
+    padding: 9px 13px;
+    font-size: 13px;
+}
+
+.botao-excluir:hover {
+    background: #A04444;
+    color: var(--branco);
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .titulo-admin h1 {
+        font-size: 30px;
+    }
+
+    .card-admin {
+        padding: 22px;
+    }
+
+    .card-admin h2 {
+        font-size: 29px;
+    }
+
+    .painel-admin {
+        padding: 20px;
+    }
+
+    .acao-admin {
+        padding: 25px;
+    }
+
+    .tabela-admin td,
+    .tabela-admin th {
+        padding: 12px;
+    }
+}
