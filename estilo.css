@@ -1160,3 +1160,243 @@ body {
         padding: 22px;
     }
 }
+
+/* Checkout e pagamentos */
+
+.pagina-checkout {
+    padding-top: 45px;
+    padding-bottom: 70px;
+    min-height: 550px;
+}
+
+.titulo-checkout {
+    margin-bottom: 35px;
+}
+
+.titulo-checkout .subtitulo {
+    color: var(--marrom);
+}
+
+.titulo-checkout h1 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+.titulo-checkout p {
+    font-size: 16px;
+    color: var(--marrom);
+}
+
+.painel-checkout {
+    background: var(--branco);
+    border: 1px solid var(--areia);
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.painel-checkout .subtitulo {
+    color: var(--marrom);
+}
+
+.painel-checkout h2 {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.painel-checkout p {
+    font-size: 15px;
+    color: var(--marrom);
+    line-height: 1.8;
+}
+
+/* Formas de pagamento */
+
+.opcao-pagamento {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--marfim);
+    border: 1px solid var(--areia);
+    padding: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.opcao-pagamento:hover {
+    border-color: var(--champagne);
+}
+
+.opcao-pagamento:has(input:checked) {
+    border-color: var(--champagne);
+    background: var(--areia);
+}
+
+.opcao-pagamento input {
+    width: 19px;
+    height: 19px;
+    accent-color: var(--marrom);
+}
+
+.opcao-pagamento strong {
+    display: block;
+    color: var(--cafe);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.opcao-pagamento span {
+    display: block;
+    color: var(--marrom);
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.aviso-pagamento {
+    background: var(--areia);
+    color: var(--marrom);
+    border-left: 3px solid var(--champagne);
+    padding: 16px;
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Produtos do pedido */
+
+.item-checkout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--areia);
+}
+
+.item-checkout img {
+    width: 65px;
+    height: 80px;
+    padding: 8px;
+    background: #F4F2EF;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.dados-item-checkout {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+}
+
+.dados-item-checkout strong {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.dados-item-checkout span {
+    font-size: 13px;
+    color: var(--marrom);
+}
+
+.preco-item-checkout {
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.botao-confirmar-compra {
+    width: 100%;
+    background: var(--cafe);
+    color: var(--marfim);
+    border: none;
+    padding: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.botao-confirmar-compra:hover {
+    background: var(--champagne);
+    color: var(--cafe);
+}
+
+/* Confirmação do pedido */
+
+.pedido-confirmado {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 45px;
+    background: var(--branco);
+    border: 1px solid var(--areia);
+    text-align: center;
+}
+
+.icone-confirmacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+    background: var(--areia);
+    color: var(--marrom);
+    border-radius: 50%;
+    font-size: 35px;
+}
+
+.pedido-confirmado .subtitulo {
+    color: var(--marrom);
+}
+
+.pedido-confirmado h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 18px 0;
+}
+
+.pedido-confirmado p {
+    color: var(--marrom);
+    font-size: 15px;
+}
+
+.dados-confirmacao {
+    background: var(--marfim);
+    padding: 25px;
+    margin: 30px 0;
+    border: 1px solid var(--areia);
+}
+
+.dados-confirmacao p:last-child {
+    margin-bottom: 0;
+}
+
+.pedido-confirmado .botao-finalizar {
+    margin-top: 25px;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .titulo-checkout h1 {
+        font-size: 30px;
+    }
+
+    .painel-checkout {
+        padding: 22px;
+    }
+
+    .painel-checkout h2 {
+        font-size: 23px;
+    }
+
+    .pedido-confirmado {
+        padding: 25px;
+    }
+
+    .pedido-confirmado h1 {
+        font-size: 26px;
+    }
+}
